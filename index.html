@@ -292,6 +292,31 @@
 			.content-spacing { width: 15px !important; }
 
             .m-hide {display: none!important;}
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
 		}
 
 		 /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
@@ -367,7 +392,7 @@
                                         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
                                                 <!-- Left Column : BEGIN -->
-                                                <th class="column" width="335" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                                <th class="stack-column-center" width="335" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
                                                     <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td class="img m-center" style="font-size:0pt; line-height:0pt; text-align:left;">
@@ -384,16 +409,10 @@
                                                 <!-- Right Column : BEGIN -->
                                                 <th class="column" width="165" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;" bgcolor="#F1F6F9" >
                                                     <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                        <tr>
-                                                            <td style="padding: 10px 20px;">
-                                                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                                    <td class="m-center center" style="font-family: 'Inter', Arial, Helvetica, sans-serif; color: #212A3E; font-size: 12px; font-weight: bold; line-height: 22px;">
-                                                                        <a href="#" style="text-decoration: none; color: #212A3E;">
-                                                                            Download our App
-                                                                        </a>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
+                                                        <td class="img m-center" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                                            <img src="images/App.png" width="165" height="auto" border="0" alt="Yummy Logo" style="width: 100%; max-width: 165px; height: auto; background-color: #ffffff; 
+                                                            color: #212A3E; font-size: 16px; line-height: 22px;" class="g-img">
+                                                        </td>
                                                     </table>
                                                 </th>
                                                 <!-- Right Column : END -->
